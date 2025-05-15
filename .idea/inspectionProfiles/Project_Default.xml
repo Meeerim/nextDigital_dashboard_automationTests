@@ -1,0 +1,45 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="12">
+            <item index="0" class="java.lang.String" itemvalue="yarg" />
+            <item index="1" class="java.lang.String" itemvalue="pipreqs" />
+            <item index="2" class="java.lang.String" itemvalue="openai" />
+            <item index="3" class="java.lang.String" itemvalue="fastapi" />
+            <item index="4" class="java.lang.String" itemvalue="docopt" />
+            <item index="5" class="java.lang.String" itemvalue="filelock" />
+            <item index="6" class="java.lang.String" itemvalue="platformdirs" />
+            <item index="7" class="java.lang.String" itemvalue="virtualenv" />
+            <item index="8" class="java.lang.String" itemvalue="python-decouple" />
+            <item index="9" class="java.lang.String" itemvalue="distlib" />
+            <item index="10" class="java.lang.String" itemvalue="urllib3" />
+            <item index="11" class="java.lang.String" itemvalue="uvicorn" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="N806" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="random.random.randint" />
+          <option value="selene.browser.config" />
+          <option value="list.keys" />
+          <option value="tuple.at_most" />
+          <option value="bytes.element_to_be_clickable" />
+          <option value="dict.remove" />
+          <option value="jwt.decode" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
