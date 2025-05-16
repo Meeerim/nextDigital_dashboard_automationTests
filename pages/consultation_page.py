@@ -19,6 +19,9 @@ class ConsultationPage(BasePage):
         self.page.get_by_role("textbox", name="Additional Notes").fill(notes)
         self.page.get_by_role("button", name="Book Appointment").click()
 
+    def submit_button(self):
+        self.page.get_by_role("button", name="Book Appointment").click()
+
     def select_random_date_and_time(self):
         self.page.get_by_role("textbox", name="Select a date").click()
         self.page.wait_for_selector('.react-datepicker__day[aria-disabled="false"]', timeout=5000)
@@ -35,6 +38,10 @@ class ConsultationPage(BasePage):
 
         random.choice(time_slots).click()
 
-    def verify_success(self):
+    def verify_success_booking(self):
         success_message = self.page.get_by_text("Booking successful! Check")
         expect(success_message).to_be_visible(timeout=10000)
+
+    def verify_required_field_error(self):
+        error_message = self.page.get_by_text("Please fill in all required").click()
+        expect(error_message).to_be_visible(timeout=10000)

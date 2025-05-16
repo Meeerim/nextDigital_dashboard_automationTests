@@ -17,3 +17,15 @@ class LoginPage(BasePage):
 
         self.page.get_by_role("textbox", name="Password").fill(password)
         self.page.get_by_role("button", name="Sign in").click()
+
+    def login_with_google(self):
+        self.page.get_by_role("button", name="Continue with Google").click()
+
+    def forgot_password(self):
+        self.page.get_by_role("link", name="Forgot Password?").click()
+        self.page.get_by_role("textbox", name="Email Address").click()
+        self.page.get_by_role("textbox", name="Email Address").fill("skmeerim@gmail.com")
+        self.page.get_by_role("button", name="Send Reset Link").click()
+
+    def verify_forgot_password(self):
+        self.page.get_by_role("button", name="Back to Reset Password").click()
